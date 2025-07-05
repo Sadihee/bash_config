@@ -1,0 +1,21 @@
+{
+    "main": {
+        "script": "~/mine/script/",
+        "project": "~/mine/project/"
+    },
+    "tool": {
+        "env": "~/mine/project/",
+        "enable": "1"
+    },
+    "eda": {
+        "verilog": {
+            "compile": "/eda/iverilog",
+            "wave": "/eda/gtk-wave",
+            "lint": "/eda/xxx"
+        },
+        "c": {
+            "compile": "gcc"
+        }
+    },
+    "test": "1000"
+}
