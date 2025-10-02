@@ -1,1 +1,38 @@
+" Plugins List
+    call plug#begin()
+        " Plug 'justinmk/vim-dirvish'
+        " Plug 'tpope/vim-commentary'
+        " Plug 'godlygeek/tabular'
+        " Plug 'majutsushi/tagbar'
+        " Plug 'vim-airline/vim-airline'
+        " Plug 'vim-airline/vim-airline-themes'
+        Plug 'tomasr/molokai'
+        Plug 'vim-scripts/autocomplpop'
+    call plug#end()
 
+
+" Regular Settings
+    colorscheme molokai
+    set background=dark
+
+    set number
+    set syntax=on
+
+    set hlsearch
+    set cursorline
+    set cursorcolumn
+    set colorcolumn=80
+    set tabstop=4
+    set shiftwidth=4
+    set expandtab
+    set autoindent
+    set foldmethod=indent
+
+
+" Plugins Settings
+    " Tab to complete words
+    set completeopt=menuone,noinsert,noselect
+    imap <Tab> <C-n>
+    imap <S-Tab> <C-p>
+    let g:AutoComplPop_Behavior = {'completeopt': 'menuone'}
+ 
