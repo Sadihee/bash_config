@@ -1,38 +1,75 @@
-" Plugins List
-    call plug#begin()
-        " Plug 'justinmk/vim-dirvish'
-        " Plug 'tpope/vim-commentary'
-        " Plug 'godlygeek/tabular'
-        " Plug 'majutsushi/tagbar'
-        " Plug 'vim-airline/vim-airline'
-        " Plug 'vim-airline/vim-airline-themes'
-        Plug 'tomasr/molokai'
-        Plug 'vim-scripts/autocomplpop'
-    call plug#end()
+" Bsic Settings
+set number            " Show line numbers
+"set relativenumber   " Show relative line numbers
+set tabstop=4         " Number of spaces a tab counts for
+set shiftwidth=4      " Number of spaces for auto-indent
+set expandtab         " Convert tabs to spaces
+set smartindent       " Smart auto-indenting
+set autoindent        " Copy indent from previous line
+set foldmethod=indent " Enable folding by indent
+set foldlevel=99      " Open all folds by default
+set hlsearch          " Highlight search results
+set incsearch         " Incremental search
+set ignorecase        " Ignore case in search
+set smartcase         " Override ignorecase if search contains uppercase
+set showmatch         " Show matching brackets
+set cursorline        " Highlight current line
+
+" Syntax and Encoding
+syntax on           " Enable syntax highlighting
+set encoding=utf-8  " Use UTF-8 encoding
+" set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+
+" UI Improvements
+" set ruler           " Show cursor position
+" set laststatus=2    " Always show status line
+" set showcmd         " Show command in status line
+" set wildmenu        " Enhanced command-line completion
+" set lazyredraw      " Redraw only when necessary
+
+" Search Settings
+" set wrapscan        " Search wraps around end of file
+" set noerrorbells    " No beeping
+" set visualbell      " Visual bell instead of beeping
+
+" Indent Settings
+set smarttab        " Smart tab behavior
+set softtabstop=4   " Number of spaces for tab in insert mode
+
+" Backup and Swap
+" set nobackup        " No backup files
+" set noswapfile      " No swap files
+" set undofile        " Enable persistent undo
+" set undodir=~/.vim/undo " Store undo history
+
+" Mouse Support
+set mouse=a         " Enable mouse in all modes
 
 
-" Regular Settings
-    colorscheme molokai
-    set background=dark
-
-    set number
-    set syntax=on
-
-    set hlsearch
-    set cursorline
-    set cursorcolumn
-    set colorcolumn=80
-    set tabstop=4
-    set shiftwidth=4
-    set expandtab
-    set autoindent
-    set foldmethod=indent
+" Key Mappings
+" nnoremap <Leader>w :w<CR>      " Save file
+" nnoremap <Leader>q :q<CR>      " Quit Vim
+" nnoremap <Leader>h :nohl<CR>   " Clear search highlighta
 
 
-" Plugins Settings
-    " Tab to complete words
-    set completeopt=menuone,noinsert,noselect
-    imap <Tab> <C-n>
-    imap <S-Tab> <C-p>
-    let g:AutoComplPop_Behavior = {'completeopt': 'menuone'}
- 
+call plug#begin('~/.vim/plugged')
+	Plug 'crusoexia/vim-monokai'
+	"Plug 'itchyny/lightline.vim'
+	Plug 'https://gitcode.com/tomasr/molokai'
+	"Plug 'justinmk/vim-dirvish'
+	Plug 'tpope/vim-commentary'
+	Plug 'https://gitcode.com/godlygeek/tabular'
+	"Plug 'majutsushi/tagbar'
+	"Plug 'vim-airline/vim-airline'
+	"Plug 'vim-airline/vim-airline-themes'
+	"Plug 'tomasr/molokai'
+	Plug 'vim-scripts/autocomplpop'
+	Plug 'preservim/nerdtree'
+call plug#end()
+
+colorscheme monokai
+
+
+
+
+
